@@ -8,7 +8,7 @@ console.log('page title is :' ,pagetitle)
 await expect(pagetitle).toBe('Automation Testing Practice')
 
 //select the readio button
-/*await page.locator("//label[@class='form-check-label' and @for='female']").click();
+await page.locator("//label[@class='form-check-label' and @for='female']").click();
 
 //seelct dropdown option 
 const countrydropdown = await page.locator('#country')
@@ -105,7 +105,7 @@ const value = await page
   .nth(3)            // 3rd column
   .textContent();
 
-console.log(value);*/
+console.log(value);
 
 const links = await page.locator('a')
 const linkText = await links.allInnerTexts()
@@ -115,5 +115,6 @@ if(linkText.includes('Home'))
     await page.locator('a', { hasText: 'Home' }).nth(2).click();
     
 }
+
 
 })
